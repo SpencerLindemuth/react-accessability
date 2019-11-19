@@ -1,0 +1,65 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #09d3ac;
+}
+
+#business-card{
+  display: grid;
+  grid-template-columns: 1;
+  width: 40vw;
+  border: solid black;
+  border-radius: 2px;
+  min-height: 20vh;
+  margin-left: 30%;
+  margin-right: 30%;
+  grid-template-rows: 40% 30% 30%;
+}
+
+#fullName{
+  margin-top: 1%;
+}
+
+#contact{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1;
+  width: 100%;
+}
+
+#email{
+  grid-column: 0/1;
+}
+
+#phone{
+  grid-column: 2/3;
+}
+
+#color-grid{
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: auto;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.colorCard:hover{
+  opacity: 60%;
+}
