@@ -35,7 +35,6 @@ function App() {
       <label htmlFor="selectFont">Business Card Font</label>
       <br />
       <select id="selectFont" onChange={(ev) => {
-        console.log(ev.target.id)
         setSelectedFont({font: ev.target.value, name: ev.target.value})}
         }
       value={selectedFont.name}>
@@ -49,7 +48,7 @@ function App() {
       <br />   
       <div id="color-grid"> 
         {colors().map(element => {
-          return <ColorCard colorName={element.name} handleClick={setBackgroundColor} />
+          return <ColorCard colorName={element.name} handleClick={setBackgroundColor}/>
         })}
       </div>
     </div>

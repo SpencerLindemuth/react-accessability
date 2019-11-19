@@ -11,7 +11,7 @@ const colorCard = (props) => {
       };
 
     return(
-        <div name={props.colorName} className="colorCard" style={styles} onClick={() => props.handleClick(props.colorName)}>
+        <div tabIndex="0" name={props.colorName} className="colorCard" style={styles} onClick={() => props.handleClick(props.colorName)} onKeyDown={(ev) => ev.which === 13 ? props.handleClick(props.colorName) : null}>
         </div>
     )
 }
