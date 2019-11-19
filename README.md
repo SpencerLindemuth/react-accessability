@@ -1,4 +1,4 @@
-##React App with full accessibility
+## React App with full accessibility
 
 This project is a clone of my hooks practice lab found <a href="https://github.com/SpencerLindemuth/hooks-practice" alt="github link to react hooks source code">here</a>, built to be accessible by screen readers and utilize keyboard only navigation. 
 I built this from scratch and avoided using external libraries.
