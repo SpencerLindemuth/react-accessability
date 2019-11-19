@@ -3,7 +3,8 @@ import React from 'react'
 const Card = (props) => {
 
     let style = {
-        backgroundColor: props.backgroundColor
+        backgroundColor: props.backgroundColor,
+        fontFamily: props.font.font
     }
 
     return(

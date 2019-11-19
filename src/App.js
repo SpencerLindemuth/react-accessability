@@ -4,34 +4,46 @@ import { useForm } from './components/useForm'
 import Card from './components/card'
 import colors from './data/colors'
 import ColorCard from './components/colorCard'
+import fonts from './data/fonts'
 
 function App() {
 
   const [values, handleChange] = useForm({firstName: '', lastName: '', email: '', phone: '', businessName: ''})
   const [backgroundColor, setBackgroundColor] = useState('white')
+  const [selectedFont, setSelectedFont] = useState({font: 'arial', name: 'Arial'})
   
 
   return (
     <div className="App">
       <p>Let's make you a business card!</p>
-      <label >Business Name</label>
+      <label htmlFor="businessName" >Business Name</label>
       <br />
-      <input value={values["businessName"]} onChange={handleChange} name="businessName" />
+      <input id="businessName" value={values["businessName"]} onChange={handleChange} name="businessName" />
       <br />
-      <label >Full Name</label>
+      <label htmlFor="fullName" >Full Name</label>
       <br />
-      <input value={values["fullName"]} onChange={handleChange} name="fullName" />
+      <input id="fullName" value={values["fullName"]} onChange={handleChange} name="fullName" />
       <br />
-      <label >Email</label>
+      <label htmlFor="email">Email</label>
       <br />
-      <input value={values["email"]} onChange={handleChange} name="email" />
+      <input id="email" value={values["email"]} onChange={handleChange} name="email" />
       <br />
-      <label >Phone Number</label>
+      <label htmlFor="phone">Phone Number</label>
       <br />
-      <input value={values["phone"]} onChange={handleChange} name="phone" />
+      <input id="phone" value={values["phone"]} onChange={handleChange} name="phone" />
+      <br />
+      <label htmlFor="selectFont">Business Card Font</label>
+      <br />
+      <select id="selectFont" onChange={(ev) => {
+        console.log(ev.target.id)
+        setSelectedFont({font: ev.target.value, name: ev.target.value})}
+        }
+      value={selectedFont.name}>
+        {fonts().map(font => <option value={font.font}>{font.name}</option>)}/>
+      </select>
       <br />
       <br />
-      <Card fullName={values.fullName} email={values.email} phone={values.phone} businessName={values.businessName} backgroundColor={backgroundColor}/>
+      <Card fullName={values.fullName} email={values.email} phone={values.phone} businessName={values.businessName} backgroundColor={backgroundColor} font={selectedFont}/>
       <br />
       <label>Card Background Color</label> 
       <br />   
