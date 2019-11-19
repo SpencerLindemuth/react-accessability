@@ -8,7 +8,7 @@ const Card = (props) => {
     }
 
     return(
-        <div id="business-card" style={style}>
+        <div title="Business Card Mockup" id="business-card" style={style}>
             <h2>{props.businessName}</h2>
             <span id="fullName">{props.fullName}</span>
             <div id="contact">
